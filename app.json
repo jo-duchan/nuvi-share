@@ -2,22 +2,17 @@
   "expo": {
     "name": "nuvi-share",
     "slug": "nuvi-share",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "permissions": [
-      "CAMERA",
-      "READ_EXTERNAL_STORAGE"
-    ],
+    "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#1C77F9"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -31,15 +26,16 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.wackycompany.nuvi_share",
-      "versionCode": 1
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "3dfdce01-391e-4173-ab84-dbeaaf9bb7b4"
+        "projectId": "b5c14ef5-a044-4045-859f-23b693d56ef9"
       }
-    }
+    },
+    "owner": "jo-duchan"
   }
 }
