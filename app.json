@@ -2,11 +2,10 @@
   "expo": {
     "name": "nuvi-share",
     "slug": "nuvi-share",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
