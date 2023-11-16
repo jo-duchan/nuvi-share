@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     NavigationBarButtonStyle.setBackgroundColorAsync("#000");
     NavigationBarButtonStyle.setButtonStyleAsync("light");
-    requestPermission();
+    // requestPermission();
 
     SplashScreen.hideAsync();
   }, []);
