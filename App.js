@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import { StyleSheet, BackHandler } from "react-native";
 import * as NavigationBarButtonStyle from "expo-navigation-bar";
@@ -50,11 +51,11 @@ export default function App() {
         onLoadProgress={({ nativeEvent }) => {
           setWebViewcanGoBack(nativeEvent.canGoBack);
         }}
-        // javaScriptEnabled
-        // mediaPlaybackRequiresUserAction={false}
-        // allowsInlineMediaPlayback
-        // javaScriptEnabledAndroid
-        // useWebkit
+        javaScriptEnabled
+        mediaPlaybackRequiresUserAction={false}
+        allowsInlineMediaPlayback
+        javaScriptEnabledAndroid
+        useWebkit
       />
     </>
   );
