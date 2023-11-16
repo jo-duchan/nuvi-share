@@ -18,7 +18,7 @@ export default function App() {
     // NavigationBarButtonStyle.setBackgroundColorAsync("#000");
     // NavigationBarButtonStyle.setButtonStyleAsync("light");
     // requestPermission();
-    // SplashScreen.hideAsync();
+    SplashScreen.hideAsync();
   }, []);
 
   // useEffect(() => {
