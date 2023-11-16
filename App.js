@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     NavigationBarButtonStyle.setBackgroundColorAsync("#000");
     NavigationBarButtonStyle.setButtonStyleAsync("light");
-
+    requestPermission();
     SplashScreen.hideAsync();
   }, []);
 
@@ -49,7 +49,7 @@ export default function App() {
         source={{ uri: "https://nuvi-app-share.wacky.kr" }}
         onLoadProgress={({ nativeEvent }) => {
           setWebViewcanGoBack(nativeEvent.canGoBack);
-          requestPermission();
+          // requestPermission();
         }}
         // javaScriptEnabled
         // mediaPlaybackRequiresUserAction={false}
