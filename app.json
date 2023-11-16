@@ -2,7 +2,7 @@
   "expo": {
     "name": "nuvi-share",
     "slug": "nuvi-share",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -35,6 +35,14 @@
         "projectId": "b5c14ef5-a044-4045-859f-23b693d56ef9"
       }
     },
-    "owner": "jo-duchan"
+    "owner": "jo-duchan",
+    "plugins": [
+      "expo-build-properties",
+      {
+        "android": {
+          "usesCleartextTraffic": true
+        }
+      }
+    ]
   }
 }
