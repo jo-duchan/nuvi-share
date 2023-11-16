@@ -15,53 +15,49 @@ export default function App() {
   const [_, requestPermission] = Camera.useCameraPermissions();
 
   useEffect(() => {
-    // NavigationBarButtonStyle.setBackgroundColorAsync("#000");
-    // NavigationBarButtonStyle.setButtonStyleAsync("light");
-    // requestPermission();
+    NavigationBarButtonStyle.setBackgroundColorAsync("#000");
+    NavigationBarButtonStyle.setButtonStyleAsync("light");
+
     SplashScreen.hideAsync();
   }, []);
 
-  // useEffect(() => {
-  //   const backAction = () => {
-  //     if (webViewcanGoBack) {
-  //       WEBVIEW.current.goBack();
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   };
+  useEffect(() => {
+    const backAction = () => {
+      if (webViewcanGoBack) {
+        WEBVIEW.current.goBack();
+        return true;
+      } else {
+        return false;
+      }
+    };
 
-  //   const backHandler = BackHandler.addEventListener(
-  //     "hardwareBackPress",
-  //     backAction
-  //   );
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
 
-  //   return () => backHandler.remove();
-  // }, [webViewcanGoBack]);
+    return () => backHandler.remove();
+  }, [webViewcanGoBack]);
 
   return (
-    <WebView
-      style={styles.container}
-      originWhitelist={["*"]}
-      source={{ uri: "https://expo.dev" }}
-    />
-    // <>
-    //   <StatusBar style="light" />
-    //   <WebView
-    //     style={styles.container}
-    //     ref={WEBVIEW}
-    //     originWhitelist={["*"]}
-    //     source={{ uri: "https://nuvi-app-share.wacky.kr" }}
-    //     // onLoadProgress={({ nativeEvent }) => {
-    //     //   setWebViewcanGoBack(nativeEvent.canGoBack);
-    //     // }}
-    //     // javaScriptEnabled
-    //     // mediaPlaybackRequiresUserAction={false}
-    //     // allowsInlineMediaPlayback
-    //     // javaScriptEnabledAndroid
-    //     // useWebkit
-    //   />
-    // </>
+    <>
+      <StatusBar style="light" />
+      <WebView
+        style={styles.container}
+        ref={WEBVIEW}
+        originWhitelist={["*"]}
+        source={{ uri: "https://nuvi-app-share.wacky.kr" }}
+        onLoadProgress={({ nativeEvent }) => {
+          setWebViewcanGoBack(nativeEvent.canGoBack);
+          requestPermission();
+        }}
+        // javaScriptEnabled
+        // mediaPlaybackRequiresUserAction={false}
+        // allowsInlineMediaPlayback
+        // javaScriptEnabledAndroid
+        // useWebkit
+      />
+    </>
   );
 }
 
