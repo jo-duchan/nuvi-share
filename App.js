@@ -43,7 +43,7 @@ export default function App() {
     <WebView
       style={styles.container}
       originWhitelist={["*"]}
-      source={{ uri: "https://nuvi-app-share.wacky.kr/onboarding" }}
+      source={{ uri: "https://expo.dev" }}
     />
     // <>
     //   <StatusBar style="light" />
@@ -51,7 +51,7 @@ export default function App() {
     //     style={styles.container}
     //     ref={WEBVIEW}
     //     originWhitelist={["*"]}
-    //     source={{ uri: "https://nuvi-app-share.wacky.kr/onboarding" }}
+    //     source={{ uri: "https://nuvi-app-share.wacky.kr" }}
     //     // onLoadProgress={({ nativeEvent }) => {
     //     //   setWebViewcanGoBack(nativeEvent.canGoBack);
     //     // }}
