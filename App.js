@@ -12,14 +12,17 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
   const WEBVIEW = useRef();
   const [webViewcanGoBack, setWebViewcanGoBack] = useState(false);
-  const [_, requestPermission] = Camera.useCameraPermissions();
+  const [status, requestPermission] = Camera.useCameraPermissions();
 
   useEffect(() => {
     NavigationBarButtonStyle.setBackgroundColorAsync("#000");
     NavigationBarButtonStyle.setButtonStyleAsync("light");
-    requestPermission();
     SplashScreen.hideAsync();
   }, []);
+
+  useEffect(() => {
+    if (!status?.granted) requestPermission();
+  }, [status]);
 
   useEffect(() => {
     const backAction = () => {
@@ -49,7 +52,6 @@ export default function App() {
         source={{ uri: "https://nuvi-app-share.wacky.kr" }}
         onLoadProgress={({ nativeEvent }) => {
           setWebViewcanGoBack(nativeEvent.canGoBack);
-          // requestPermission();
         }}
         // javaScriptEnabled
         // mediaPlaybackRequiresUserAction={false}
