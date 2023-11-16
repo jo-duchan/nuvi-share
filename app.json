@@ -2,7 +2,7 @@
   "expo": {
     "name": "nuvi-share",
     "slug": "nuvi-share",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,10 +16,7 @@
       "supportsTablet": true
     },
     "android": {
-      "blockedPermissions": [
-        "android.permission.CAMERA",
-        "android.permission.INTERNET"
-      ],
+      "blockedPermissions": ["android.permission.CAMERA"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
